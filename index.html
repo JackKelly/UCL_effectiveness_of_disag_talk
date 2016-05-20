@@ -27,29 +27,6 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-29040208-4', 'auto');
-      ga('send', 'pageview');
-
-      // From https://github.com/hakimel/reveal.js/issues/211#issuecomment-60726240
-      $(document).ready(function () {
-        Reveal.addEventListener("slidechanged",function(event){
-
-          ga('send', 'pageview', {
-            'page': event.indexh,
-            'title': document.title + ' : Slide ' + event.indexh
-          });
-
-    });
-});
-    </script>
     
   </head>
 
@@ -870,6 +847,28 @@ Workshop</em>, Vancouver, Canada, 14-15 May 2016.</p>
     
     <!-- REVEAL INIT -->
     <script src="js/reveal-init.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-29040208-4', 'auto');
+      ga('send', 'pageview');
+
+      // From https://github.com/hakimel/reveal.js/issues/211#issuecomment-60726240
+      Reveal.addEventListener("slidechanged",function(event){
+
+      ga('send', 'pageview', {
+      'page': event.indexh,
+      'title': document.title + ' : Slide ' + event.indexh
+      });
+
+    });
+    </script>
+
     
   </body>
 </html>
