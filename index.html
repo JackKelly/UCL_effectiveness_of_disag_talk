@@ -48,7 +48,7 @@
               <a href="http://jack-kelly.com">Jack Kelly</a><br/>
               jack.kelly@imperial.ac.uk<br/>
               <br/>
-              (<em>Press right-arrow on your keyboard to start</em>)
+              (<em>Press right-arrow on your keyboard to change slides</em>)
             </small>
           </p>
           </div>
@@ -859,12 +859,12 @@ Workshop</em>, Vancouver, Canada, 14-15 May 2016.</p>
       // From https://github.com/hakimel/reveal.js/issues/211#issuecomment-60726240
       Reveal.addEventListener("slidechanged",function(event){
 
-      ga('send', 'pageview', {
-      'page': event.indexh,
-      'title': document.title + ' : Slide ' + event.indexh
-      });
+        ga('send', 'pageview', {
+          'page': event.indexh,
+          'title': document.title + ' : Slide ' + event.indexh
+        });
 
-    });
+      });
     </script>
 
     
